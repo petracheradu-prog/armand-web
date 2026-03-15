@@ -3,14 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Armand | Web Developer</title>
-  <meta name="description" content="Website-uri moderne pentru afaceri locale. Portofoliu, prețuri și contact.">
+  <title>Armand | Website-uri și automatizări pentru afaceri locale</title>
+  <meta name="description" content="Website-uri moderne și soluții de automatizare pentru afaceri locale. Portofoliu, beneficii și contact rapid prin WhatsApp sau email.">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -20,29 +24,38 @@
       line-height: 1.6;
     }
 
-    header{
-  padding: 90px 20px 70px;
-  text-align: center;
+    header {
+      padding: 100px 20px 80px;
+      text-align: center;
+      background:
+        linear-gradient(rgba(2, 6, 23, 0.82), rgba(2, 6, 23, 0.88)),
+        url("https://images.unsplash.com/photo-1498050108023-c5249f4df085");
+      background-size: cover;
+      background-position: center;
+    }
 
-  background:
-  linear-gradient(rgba(2,6,23,0.85), rgba(2,6,23,0.85)),
-  url("https://images.unsplash.com/photo-1498050108023-c5249f4df085");
-
-  background-size: cover;
-  background-position: center;
-}
-
-   header h1{
-        background: linear-gradient(90deg,#22c55e,#38bdf8);
-        -webkit-background-clip:text;
-        color:transparent;
-}
+    header h1 {
+      font-size: 50px;
+      line-height: 1.15;
+      max-width: 900px;
+      margin: 0 auto 20px;
+      background: linear-gradient(90deg, #22c55e, #38bdf8);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
 
     header p {
-      max-width: 700px;
-      margin: 0 auto 28px;
+      max-width: 760px;
+      margin: 0 auto 30px;
       color: #cbd5e1;
       font-size: 18px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
     }
 
     .btn {
@@ -52,36 +65,61 @@
       text-decoration: none;
       padding: 14px 26px;
       border-radius: 10px;
-      font-weight: bold;
+      font-weight: 600;
+      transition: 0.25s ease;
+      box-shadow: 0 10px 24px rgba(34, 197, 94, 0.18);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(34, 197, 94, 0.28);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.18);
+      color: white;
+      box-shadow: none;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.05);
     }
 
     .container {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 50px 20px;
+      padding: 55px 20px;
     }
 
     section {
-      margin-bottom: 60px;
+      margin-bottom: 75px;
     }
 
     h2 {
-      font-size: 30px;
+      font-size: 32px;
       margin-bottom: 18px;
     }
 
-    .card {
-  background: #1e293b;
-  padding: 24px;
-  border-radius: 14px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
+    .section-text {
+      color: #cbd5e1;
+      max-width: 780px;
+      margin-bottom: 22px;
+    }
 
-.card:hover{
-  transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.3);
-}
+    .card {
+      background: #1e293b;
+      padding: 24px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      border: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.28);
+    }
 
     .grid {
       display: grid;
@@ -89,19 +127,59 @@
       gap: 18px;
     }
 
-    .price {
-      font-size: 26px;
-      color: #22c55e;
-      font-weight: bold;
-      margin-top: 10px;
-    }
-
     .portfolio-link {
       display: inline-block;
       margin-top: 14px;
       color: #22c55e;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+    }
+
+    .portfolio-link:hover {
+      opacity: 0.9;
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+      font-size: 22px;
+    }
+
+    .feature-card {
+      font-weight: 500;
+      color: #e2e8f0;
+    }
+
+    .cta-box {
+      text-align: center;
+      background: linear-gradient(135deg, #1e293b, #111827);
+      border: 1px solid rgba(255,255,255,0.06);
+      padding: 42px 24px;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+
+    .cta-box h2 {
+      margin-bottom: 14px;
+    }
+
+    .cta-box p {
+      max-width: 760px;
+      margin: 0 auto 22px;
+      color: #cbd5e1;
+    }
+
+    .contact-list p {
+      margin-bottom: 12px;
+      color: #e2e8f0;
+    }
+
+    .contact-list a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    .contact-list a:hover {
+      text-decoration: underline;
     }
 
     footer {
@@ -110,21 +188,59 @@
       color: #94a3b8;
     }
 
-    ul {
-      padding-left: 20px;
+    a {
+      color: #38bdf8;
     }
 
-    li {
-      margin-bottom: 8px;
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #25D366;
+      color: white;
+      font-size: 28px;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      text-decoration: none;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      transition: 0.25s ease;
+      z-index: 1000;
     }
 
-    @media (max-width: 600px) {
+    .whatsapp-btn:hover {
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 700px) {
+      header {
+        padding: 80px 18px 65px;
+      }
+
       header h1 {
         font-size: 34px;
       }
 
+      header p {
+        font-size: 16px;
+      }
+
       h2 {
-        font-size: 25px;
+        font-size: 27px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
       }
     }
   </style>
@@ -132,165 +248,119 @@
 <body>
 
   <header>
-    <h1>Website-uri pentru afaceri locale</h1>
-    <p>Ajut firmele să atragă mai mulți clienți prin site-uri moderne, rapide și optimizate pentru Google.</p>
-    <a href="#portfolio" class="btn">Vezi portofoliul</a>
+    <h1>Website-uri moderne și soluții de automatizare pentru afaceri locale</h1>
+    <p>Ajut afacerile locale să arate profesionist online, să inspire mai multă încredere și să răspundă mai eficient clienților prin website-uri rapide, bine structurate și soluții digitale simple.</p>
+
+    <div class="hero-buttons">
+      <a href="#portfolio" class="btn">Vezi portofoliul</a>
+      <a href="https://wa.me/40755984849" target="_blank" class="btn btn-secondary">Scrie-mi pe WhatsApp</a>
+    </div>
   </header>
 
   <div class="container">
+
     <section>
-      <h2>Despre mine</h2>
-      <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c"
-style="width:100%; border-radius:12px; margin-bottom:20px;">
-      <div class="card">
-        <p>Salut! Sunt <strong>Armand</strong>, student la Automatică și Calculatoare.</p>
-        <br>
-        <p>Mă ocup de realizarea de website-uri moderne pentru afaceri locale precum frizerii, săli de fitness, saloane beauty, clinici și alte business-uri care vor să fie mai vizibile online.</p>
-        <br>
-        <p>Site-urile pe care le creez sunt optimizate pentru mobil, clare, rapide și gândite să inspire încredere clienților.</p>
-      </div>
-    </section>
+  <h2>Despre mine</h2>
+  <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c" alt="Laptop cu cod" style="width:100%; border-radius:14px; margin-bottom:20px;">
+  <div class="card">
+    <p>Salut! Sunt <strong>Armand</strong> și realizez website-uri moderne și soluții digitale pentru afaceri locale care vor să aibă o prezență online mai bună.</p>
+    <br>
+    <p>Construiesc pagini clare, rapide și optimizate pentru mobil, astfel încât un client care intră pe site să înțeleagă imediat cine ești, ce oferi și de ce merită să te contacteze.</p>
+    <br>
+    <p>Mă interesează atât partea de design și prezentare, cât și partea de funcționalitate, pentru ca website-ul să nu arate doar bine, ci să fie util și pentru atragerea de clienți.</p>
+    <br>
+    <p>Scopul meu este să creez soluții simple, profesionale și eficiente, potrivite pentru business-uri locale care vor să inspire încredere și să crească mai ușor online.</p>
+  </div>
+</section>
 
     <section id="portfolio">
-  <h2>Portofoliu</h2>
+      <h2>Portofoliu</h2>
+      <p class="section-text">Câteva exemple de website-uri realizate pentru afaceri locale. Fiecare proiect este gândit să combine designul modern cu claritatea și o experiență bună pentru client.</p>
 
-  <div class="grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0"
-      style="width:100%; border-radius:10px; margin-bottom:15px;">
-
-      <h3>Barber Evolution</h3>
-      <p>Website modern pentru o frizerie premium.</p>
-
-      <a class="portfolio-link"
-      href="https://petracheradu-prog.github.io/barber-evolution/"
-      target="_blank">Vezi site →</a>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85"
-      style="width:100%; border-radius:10px; margin-bottom:15px;">
-
-      <h3>Cabana Bombonel</h3>
-      <p>Website de prezentare pentru o cabană, cu design cald, elegant și orientat spre rezervări.</p>
-
-      <a class="portfolio-link"
-      href="https://petracheradu-prog.github.io/cabana-bombonel/"
-      target="_blank">Vezi site →</a>
-    </div>
-  </div>
-</section>
-
-    <section>
-      <h2>Ce primești</h2>
-      <div class="grid">
-        <div class="card">Website modern</div>
-        <div class="card">Design optimizat pentru mobil</div>
-        <div class="card">Optimizare Google (SEO)</div>
-        <div class="card">Integrare Google Maps</div>
-        <div class="card">Programări online</div>
-        <div class="card">Hosting gratuit</div>
-      </div>
-    </section>
-    <section>
-<h2>De ce să mă alegi</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Site rapid</h3>
-<p>Website-uri optimizate pentru viteză și experiență pe mobil.</p>
-</div>
-
-<div class="card">
-<h3>Optimizare Google</h3>
-<p>Site-ul este pregătit pentru a apărea în căutările Google.</p>
-</div>
-
-<div class="card">
-<h3>Design modern</h3>
-<p>Design curat și profesional care inspiră încredere clienților.</p>
-</div>
-
-<div class="card">
-<h3>Suport</h3>
-<p>Te ajut și după lansarea site-ului dacă ai nevoie de modificări.</p>
-</div>
-
-</div>
-</section>
-
-    <section>
-      <h2>Prețuri</h2>
       <div class="grid">
         <div class="card">
-          <h3>Site prezentare</h3>
-          <p>Pentru firme care au nevoie de prezență online clară și profesională.</p>
-          <div class="price">150€ – 200€</div>
+          <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0" alt="Proiect Barber Evolution" style="width:100%; border-radius:10px; margin-bottom:15px;">
+          <h3>Barber Evolution</h3>
+          <p>Website modern pentru o frizerie premium, construit pentru o imagine profesională și o prezentare clară a serviciilor.</p>
+          <a class="portfolio-link" href="https://petracheradu-prog.github.io/barber-evolution/" target="_blank">Vezi site →</a>
         </div>
+
         <div class="card">
-          <h3>Site business complet</h3>
-          <p>Pentru afaceri care vor o prezentare mai completă și mai puternică.</p>
-          <div class="price">250€ – 400€</div>
+          <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85" alt="Proiect Cabana Bombonel" style="width:100%; border-radius:10px; margin-bottom:15px;">
+          <h3>Cabana Bombonel</h3>
+          <p>Website de prezentare pentru o cabană, cu un design elegant și o structură orientată spre rezervări și încredere.</p>
+          <a class="portfolio-link" href="https://petracheradu-prog.github.io/cabana-bombonel/" target="_blank">Vezi site →</a>
         </div>
       </div>
     </section>
 
     <section>
-  <h2>Contact</h2>
-  <div class="card">
+      <h2>Cu ce te pot ajuta</h2>
+      <div class="grid">
+        <div class="card feature-card">Website de prezentare modern și profesional</div>
+        <div class="card feature-card">Design optimizat pentru telefon și tabletă</div>
+        <div class="card feature-card">Structură clară, ușor de înțeles pentru client</div>
+        <div class="card feature-card">Optimizare pentru Google și prezență online mai bună</div>
+        <div class="card feature-card">Integrare Google Maps și date de contact vizibile</div>
+        <div class="card feature-card">Soluții simple de automatizare pentru cereri și mesaje</div>
+      </div>
+    </section>
 
-    <p>
-      <strong>Instagram:</strong>
-      <a href="https://www.instagram.com/armand__radu/" target="_blank">
-      @armand__radu
-      </a>
-    </p>
+    <section>
+      <h2>De ce să lucrezi cu mine</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Imagine profesională</h3>
+          <p>Un website bine făcut îți poate schimba modul în care este perceput business-ul tău încă din primele secunde.</p>
+        </div>
 
-    <p>
-      <strong>TikTok:</strong>
-      <a href="https://www.tiktok.com/@armandwebsites" target="_blank">
-      @armandwebsites
-      </a>
-    </p>
+        <div class="card">
+          <h3>Experiență bună pe mobil</h3>
+          <p>Majoritatea clienților intră de pe telefon, iar paginile trebuie să arate impecabil și să se miște rapid.</p>
+        </div>
 
-    <br>
+        <div class="card">
+          <h3>Claritate și încredere</h3>
+          <p>Un site bun nu înseamnă doar design frumos, ci și informație clară, structură logică și o prezentare care convinge.</p>
+        </div>
 
-    <p>Pentru colaborări, scrie-mi în DM.</p>
+        <div class="card">
+          <h3>Colaborare serioasă</h3>
+          <p>Mă implic astfel încât rezultatul final să fie curat, util și potrivit pentru tipul de afacere pe care îl ai.</p>
+        </div>
+      </div>
+    </section>
 
-  </div>
-</section>
+    <section>
+      <div class="cta-box">
+        <h2>Vrei să discutăm despre afacerea ta?</h2>
+        <p>Dacă ai nevoie de un website modern sau vrei să vezi cum ai putea folosi soluții digitale simple pentru a răspunde mai bine clienților, scrie-mi și discutăm. Îți pot spune ce s-ar potrivi cel mai bine pentru tipul tău de business.</p>
+        <div class="hero-buttons">
+          <a href="https://wa.me/40755984849" target="_blank" class="btn">Contact pe WhatsApp</a>
+          <a href="mailto:petrachearmandraducu@gmail.com" class="btn btn-secondary">Trimite email</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <div class="card contact-list">
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/40755984849" target="_blank">0755984849</a></p>
+        <p><strong>Email:</strong> <a href="mailto:petrachearmandraducu@gmail.com">petrachearmandraducu@gmail.com</a></p>
+        <p><strong>Instagram:</strong> <a href="https://www.instagram.com/armand__radu/" target="_blank">@armand__radu</a></p>
+        <p><strong>TikTok:</strong> <a href="https://www.tiktok.com/@armandwebsites" target="_blank">@armandwebsites</a></p>
+        <br>
+        <p>Dacă vrei o colaborare, o pagină de prezentare sau o soluție digitală simplă pentru business-ul tău, mă poți contacta direct pe WhatsApp sau email.</p>
+      </div>
+    </section>
+
   </div>
 
   <footer>
-    © 2026 Armand Web Developer
+    © 2026 Armand | Website-uri și soluții digitale pentru afaceri locale
   </footer>
 
-  <a href="https://wa.me/40755984849" target="_blank" class="whatsapp-btn">
-💬
-</a>
-
-<style>
-.whatsapp-btn{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#25D366;
-color:white;
-font-size:28px;
-width:60px;
-height:60px;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:50%;
-text-decoration:none;
-box-shadow:0 8px 20px rgba(0,0,0,0.3);
-}
-.whatsapp-btn:hover{
-transform:scale(1.1);
-}
-</style>
+  <a href="https://wa.me/40755984849" target="_blank" class="whatsapp-btn" aria-label="Contact WhatsApp">💬</a>
 
 </body>
 </html>
