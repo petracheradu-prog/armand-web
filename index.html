@@ -1,16 +1,40 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Armand | Website-uri și automatizări pentru afaceri locale</title>
-  <meta name="description" content="Website-uri moderne și soluții de automatizare pentru afaceri locale. Portofoliu, demo chatbot AI, beneficii și contact rapid prin WhatsApp sau email.">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Armand Petrache | Website-uri premium și automatizări pentru afaceri locale</title>
+  <meta
+    name="description"
+    content="Website-uri premium, identitate vizuală elegantă și automatizări inteligente pentru afaceri locale care vor să inspire încredere și să atragă mai mulți clienți."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
+    :root {
+      --bg: #090909;
+      --bg-soft: #111111;
+      --card: rgba(255, 255, 255, 0.04);
+      --card-strong: rgba(255, 255, 255, 0.06);
+      --line: rgba(201, 162, 92, 0.18);
+      --gold: #c9a25c;
+      --gold-soft: #e6c98b;
+      --text: #f5f1e8;
+      --muted: #b5aca0;
+      --white-soft: rgba(255,255,255,0.85);
+      --shadow: 0 20px 60px rgba(0,0,0,0.45);
+      --radius: 24px;
+      --radius-sm: 18px;
+      --max: 1220px;
+    }
+
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     html {
@@ -18,379 +42,1001 @@
     }
 
     body {
-      font-family: 'Poppins', sans-serif;
-      background: #0f172a;
-      color: white;
-      line-height: 1.6;
-    }
-
-    header {
-      padding: 100px 20px 80px;
-      text-align: center;
+      font-family: 'Inter', sans-serif;
       background:
-        linear-gradient(rgba(2, 6, 23, 0.82), rgba(2, 6, 23, 0.88)),
-        url("https://images.unsplash.com/photo-1498050108023-c5249f4df085");
-      background-size: cover;
-      background-position: center;
+        radial-gradient(circle at top left, rgba(201,162,92,0.08), transparent 28%),
+        radial-gradient(circle at top right, rgba(255,255,255,0.035), transparent 22%),
+        linear-gradient(180deg, #070707 0%, #0c0c0c 45%, #080808 100%);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
     }
 
-    header h1 {
-      font-size: 50px;
-      line-height: 1.15;
-      max-width: 900px;
-      margin: 0 auto 20px;
-      background: linear-gradient(90deg, #22c55e, #38bdf8);
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    header p {
-      max-width: 760px;
-      margin: 0 auto 30px;
-      color: #cbd5e1;
-      font-size: 18px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      background: #22c55e;
-      color: white;
-      text-decoration: none;
-      padding: 14px 26px;
-      border-radius: 10px;
-      font-weight: 600;
-      transition: 0.25s ease;
-      box-shadow: 0 10px 24px rgba(34, 197, 94, 0.18);
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 14px 30px rgba(34, 197, 94, 0.28);
-    }
-
-    .btn-secondary {
-      background: transparent;
-      border: 1px solid rgba(255,255,255,0.18);
-      color: white;
-      box-shadow: none;
-    }
-
-    .btn-secondary:hover {
-      background: rgba(255,255,255,0.05);
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 55px 20px;
-    }
-
-    section {
-      margin-bottom: 75px;
-    }
-
-    h2 {
-      font-size: 32px;
-      margin-bottom: 18px;
-    }
-
-    .section-text {
-      color: #cbd5e1;
-      max-width: 780px;
-      margin-bottom: 22px;
-    }
-
-    .card {
-      background: #1e293b;
-      padding: 24px;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.18);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-      border: 1px solid rgba(255,255,255,0.04);
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 18px 40px rgba(0,0,0,0.28);
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 18px;
-    }
-
-    .portfolio-link {
-      display: inline-block;
-      margin-top: 14px;
-      color: #22c55e;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .portfolio-link:hover {
-      opacity: 0.9;
-    }
-
-    .card h3 {
-      margin-bottom: 8px;
-      font-size: 22px;
-    }
-
-    .feature-card {
-      font-weight: 500;
-      color: #e2e8f0;
-    }
-
-    .demo-box {
-      text-align: center;
-      background: linear-gradient(135deg, #1e293b, #111827);
-      border: 1px solid rgba(255,255,255,0.06);
-      padding: 42px 24px;
-      border-radius: 20px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-    }
-
-    .demo-box h2 {
-      margin-bottom: 14px;
-    }
-
-    .demo-box p {
-      max-width: 760px;
-      margin: 0 auto 22px;
-      color: #cbd5e1;
-    }
-
-    .cta-box {
-      text-align: center;
-      background: linear-gradient(135deg, #1e293b, #111827);
-      border: 1px solid rgba(255,255,255,0.06);
-      padding: 42px 24px;
-      border-radius: 20px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-    }
-
-    .cta-box h2 {
-      margin-bottom: 14px;
-    }
-
-    .cta-box p {
-      max-width: 760px;
-      margin: 0 auto 22px;
-      color: #cbd5e1;
-    }
-
-    .contact-list p {
-      margin-bottom: 12px;
-      color: #e2e8f0;
-    }
-
-    .contact-list a {
-      color: #38bdf8;
-      text-decoration: none;
-    }
-
-    .contact-list a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px 20px 45px;
-      color: #94a3b8;
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(rgba(255,255,255,0.015), rgba(255,255,255,0.015)),
+        radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.15) 70%);
+      mix-blend-mode: soft-light;
+      opacity: 0.5;
+      z-index: 0;
     }
 
     a {
-      color: #38bdf8;
+      color: inherit;
+      text-decoration: none;
     }
 
-    .whatsapp-btn {
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .section {
+      padding: 110px 0;
+      position: relative;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 4vw, 3.6rem);
+      line-height: 1;
+      margin-bottom: 18px;
+      letter-spacing: 0.3px;
+      color: #f7efe0;
+    }
+
+    .section-kicker {
+      display: inline-block;
+      margin-bottom: 18px;
+      color: var(--gold-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+
+    .section-text {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    .divider {
+      width: 90px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 28px 0 0;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      backdrop-filter: blur(18px);
+      background: rgba(6, 6, 6, 0.7);
+      border-bottom: 1px solid rgba(201, 162, 92, 0.08);
+    }
+
+    .nav-inner {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .brand strong {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: #f7efe0;
+    }
+
+    .brand span {
+      color: var(--gold-soft);
+      font-size: 0.72rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      margin-top: 6px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: #d4cec5;
+      font-size: 0.95rem;
+      transition: 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold-soft);
+    }
+
+    .nav-cta {
+      padding: 12px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(201, 162, 92, 0.32);
+      color: #f5ead6 !important;
+      background: linear-gradient(180deg, rgba(201,162,92,0.14), rgba(201,162,92,0.05));
+      box-shadow: 0 12px 28px rgba(0,0,0,0.28);
+    }
+
+    .hero {
+      min-height: calc(100vh - 78px);
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 70px 0 50px;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(201,162,92,0.08), transparent 25%),
+        radial-gradient(circle at 80% 30%, rgba(255,255,255,0.04), transparent 18%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.9fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--gold-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.28em;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 22px;
+      display: inline-block;
+    }
+
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3.2rem, 7vw, 6rem);
+      line-height: 0.95;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      max-width: 820px;
+      color: #f8f1e6;
+      text-wrap: balance;
+    }
+
+    .hero h1 .gold {
+      color: var(--gold);
+    }
+
+    .hero p {
+      margin-top: 26px;
+      max-width: 700px;
+      color: #c6beb3;
+      font-size: 1.08rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 34px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      padding: 0 24px;
+      border-radius: 999px;
+      font-weight: 600;
+      transition: 0.28s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #c9a25c, #8f6a32);
+      color: #0b0907;
+      box-shadow: 0 18px 34px rgba(201,162,92,0.22);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 22px 42px rgba(201,162,92,0.3);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: #f7f2eb;
+      backdrop-filter: blur(10px);
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-2px);
+      border-color: rgba(201, 162, 92, 0.34);
+      background: rgba(255,255,255,0.05);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 38px;
+    }
+
+    .meta-pill {
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.035);
+      border: 1px solid rgba(255,255,255,0.06);
+      color: #d0c8bc;
+      font-size: 0.92rem;
+    }
+
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .portrait-frame {
+      position: relative;
+      width: min(460px, 100%);
+      border-radius: 34px;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+      border: 1px solid rgba(201, 162, 92, 0.22);
+      box-shadow: var(--shadow);
+      isolation: isolate;
+    }
+
+    .portrait-frame::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.5)),
+        radial-gradient(circle at top, rgba(201,162,92,0.18), transparent 38%);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .portrait-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      min-height: 660px;
+      filter: saturate(0.9) contrast(1.05) brightness(0.92);
+    }
+
+    .portrait-badge {
+      position: absolute;
+      left: 22px;
+      bottom: 22px;
+      z-index: 2;
+      padding: 14px 18px;
+      border-radius: 18px;
+      backdrop-filter: blur(14px);
+      background: rgba(10, 10, 10, 0.5);
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+    }
+
+    .portrait-badge strong {
+      display: block;
+      font-size: 1rem;
+      color: #f8f1e6;
+      margin-bottom: 4px;
+    }
+
+    .portrait-badge span {
+      font-size: 0.88rem;
+      color: #cdbfa8;
+    }
+
+    .floating-accent {
+      position: absolute;
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201,162,92,0.16), transparent 65%);
+      filter: blur(8px);
+      z-index: 0;
+    }
+
+    .accent-1 {
+      top: -30px;
+      right: -20px;
+    }
+
+    .accent-2 {
+      bottom: 30px;
+      left: -40px;
+    }
+
+    .about-grid,
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .panel {
+      background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.025));
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      padding: 34px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
+    }
+
+    .panel p {
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .panel p:last-child {
+      margin-bottom: 0;
+    }
+
+    .quote-card {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background:
+        linear-gradient(180deg, rgba(201,162,92,0.08), rgba(255,255,255,0.03)),
+        rgba(255,255,255,0.03);
+      border: 1px solid rgba(201,162,92,0.16);
+    }
+
+    .quote-card blockquote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      line-height: 1.15;
+      color: #f6eddf;
+      margin-bottom: 24px;
+    }
+
+    .quote-card .signature {
+      color: var(--gold-soft);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .services-grid,
+    .benefits-grid,
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 22px;
+      margin-top: 38px;
+    }
+
+    .service-card,
+    .benefit-card,
+    .project-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.02));
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: 0.3s ease;
+      position: relative;
+    }
+
+    .service-card:hover,
+    .benefit-card:hover,
+    .project-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(201,162,92,0.22);
+      box-shadow: 0 28px 60px rgba(0,0,0,0.5);
+    }
+
+    .service-card {
+      grid-column: span 4;
+      padding: 28px;
+    }
+
+    .service-card .number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      color: rgba(201,162,92,0.75);
+      margin-bottom: 14px;
+    }
+
+    .service-card h3,
+    .benefit-card h3,
+    .project-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      line-height: 1;
+      margin-bottom: 14px;
+      color: #f7efe0;
+    }
+
+    .service-card p,
+    .benefit-card p,
+    .project-card p {
+      color: var(--muted);
+    }
+
+    .benefit-card {
+      grid-column: span 6;
+      padding: 30px;
+    }
+
+    .project-card {
+      grid-column: span 6;
+    }
+
+    .project-image {
+      height: 290px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .project-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.72) saturate(0.88);
+      transition: 0.45s ease;
+    }
+
+    .project-card:hover .project-image img {
+      transform: scale(1.05);
+    }
+
+    .project-image::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.55)),
+        radial-gradient(circle at top right, rgba(201,162,92,0.12), transparent 35%);
+    }
+
+    .project-content {
+      padding: 28px;
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 18px;
+      color: var(--gold-soft);
+      font-weight: 600;
+    }
+
+    .project-link:hover {
+      opacity: 0.88;
+    }
+
+    .showcase {
+      margin-top: 38px;
+      border-radius: 30px;
+      padding: 44px 30px;
+      background:
+        linear-gradient(120deg, rgba(201,162,92,0.09), rgba(255,255,255,0.025)),
+        rgba(255,255,255,0.025);
+      border: 1px solid rgba(201,162,92,0.14);
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .showcase h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 14px;
+      color: #f8f1e7;
+    }
+
+    .showcase p {
+      color: var(--muted);
+      max-width: 760px;
+      margin: 0 auto 24px;
+    }
+
+    .contact-card {
+      padding: 36px;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 16px;
+      margin-top: 10px;
+    }
+
+    .contact-item {
+      padding: 18px 20px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      transition: 0.25s ease;
+    }
+
+    .contact-item:hover {
+      border-color: rgba(201,162,92,0.24);
+      transform: translateY(-3px);
+    }
+
+    .contact-item strong {
+      display: block;
+      color: #f4ecdd;
+      margin-bottom: 4px;
+      font-size: 0.96rem;
+    }
+
+    .contact-item span,
+    .contact-item a {
+      color: var(--muted);
+    }
+
+    .cta-panel {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02)),
+        radial-gradient(circle at top left, rgba(201,162,92,0.14), transparent 35%);
+    }
+
+    .cta-panel h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1;
+      margin-bottom: 18px;
+      color: #f7efe0;
+    }
+
+    .cta-panel p {
+      color: var(--muted);
+      margin-bottom: 26px;
+      max-width: 520px;
+    }
+
+    footer {
+      padding: 28px 20px 40px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      color: #8e867d;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .whatsapp-float {
       position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background: #25D366;
-      color: white;
-      font-size: 28px;
-      width: 60px;
-      height: 60px;
+      right: 24px;
+      bottom: 24px;
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: 50%;
-      text-decoration: none;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-      transition: 0.25s ease;
+      font-size: 1.6rem;
+      background: linear-gradient(135deg, #c9a25c, #8f6a32);
+      color: #0c0906;
+      box-shadow: 0 18px 34px rgba(0,0,0,0.4);
       z-index: 1000;
+      transition: 0.28s ease;
     }
 
-    .whatsapp-btn:hover {
-      transform: scale(1.1);
+    .whatsapp-float:hover {
+      transform: translateY(-4px) scale(1.04);
     }
 
-    @media (max-width: 700px) {
-      header {
-        padding: 80px 18px 65px;
+    @media (max-width: 1100px) {
+      .hero-grid,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
       }
 
-      header h1 {
-        font-size: 34px;
+      .hero {
+        min-height: auto;
+        padding-top: 50px;
       }
 
-      header p {
-        font-size: 16px;
+      .hero-visual {
+        order: -1;
       }
 
-      h2 {
-        font-size: 27px;
+      .portrait-frame {
+        max-width: 520px;
       }
 
-      .hero-buttons {
+      .service-card,
+      .benefit-card,
+      .project-card {
+        grid-column: span 12;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav-inner {
+        min-height: auto;
+        padding: 16px 0;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        gap: 14px;
+      }
+
+      .section {
+        padding: 82px 0;
+      }
+
+      .panel,
+      .service-card,
+      .benefit-card,
+      .project-content,
+      .contact-card {
+        padding: 24px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
       }
 
       .btn {
         width: 100%;
-        max-width: 320px;
-        text-align: center;
+      }
+
+      .portrait-frame img {
+        min-height: 480px;
+      }
+
+      .project-image {
+        height: 230px;
+      }
+
+      .quote-card blockquote {
+        font-size: 1.7rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Website-uri moderne și soluții de automatizare pentru afaceri locale</h1>
-    <p>Ajut afacerile locale să arate profesionist online, să inspire mai multă încredere și să răspundă mai eficient clienților prin website-uri rapide, bine structurate și soluții digitale simple.</p>
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="#" class="brand">
+        <strong>Armand Petrache</strong>
+        <span>Premium Digital Presence</span>
+      </a>
 
-    <div class="hero-buttons">
-      <a href="#portfolio" class="btn">Vezi portofoliul</a>
-      <a href="#chatbot-demo" class="btn btn-secondary">Testează chatbotul</a>
-      <a href="https://wa.me/40755984849" target="_blank" class="btn btn-secondary">Scrie-mi pe WhatsApp</a>
+      <div class="nav-links">
+        <a href="#despre">Despre</a>
+        <a href="#portofoliu">Portofoliu</a>
+        <a href="#servicii">Servicii</a>
+        <a href="#chatbot">Demo AI</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </div>
     </div>
-  </header>
+  </nav>
 
-  <div class="container">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Website-uri premium • Automatizări • Imagine de brand</span>
+        <h1>
+          Construiesc prezențe online care arată <span class="gold">scump</span>,
+          inspiră încredere și aduc clienți.
+        </h1>
 
-    <section>
-      <h2>Despre mine</h2>
-      <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c" alt="Laptop cu cod" style="width:100%; border-radius:14px; margin-bottom:20px;">
-      <div class="card">
-        <p>Salut! Sunt <strong>Armand</strong> și realizez website-uri moderne și soluții digitale pentru afaceri locale care vor să aibă o prezență online mai bună.</p>
-        <br>
-        <p>Construiesc pagini clare, rapide și optimizate pentru mobil, astfel încât un client care intră pe site să înțeleagă imediat cine ești, ce oferi și de ce merită să te contacteze.</p>
-        <br>
-        <p>Mă interesează atât partea de design și prezentare, cât și partea de funcționalitate, pentru ca website-ul să nu arate doar bine, ci să fie util și pentru atragerea de clienți.</p>
-        <br>
-        <p>Pe lângă website-uri, lucrez și la soluții simple de automatizare care pot ajuta un business să răspundă mai rapid clienților și să gestioneze mai eficient cererile și întrebările frecvente.</p>
-      </div>
-    </section>
+        <p>
+          Ajut afacerile locale să treacă de la un simplu „site prezent” la o imagine care transmite
+          autoritate, eleganță și profesionalism. Creez website-uri premium și soluții digitale
+          inteligente pentru business-uri care vor să fie luate în serios din prima secundă.
+        </p>
 
-    <section id="portfolio">
-      <h2>Portofoliu</h2>
-      <p class="section-text">Câteva exemple de website-uri realizate pentru afaceri locale. Fiecare proiect este gândit să combine designul modern cu claritatea și o experiență bună pentru client.</p>
-
-      <div class="grid">
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0" alt="Proiect Barber Evolution" style="width:100%; border-radius:10px; margin-bottom:15px;">
-          <h3>Barber Evolution</h3>
-          <p>Website modern pentru o frizerie premium, construit pentru o imagine profesională și o prezentare clară a serviciilor.</p>
-          <a class="portfolio-link" href="https://petracheradu-prog.github.io/barber-evolution/" target="_blank">Vezi site →</a>
+        <div class="hero-actions">
+          <a href="#portofoliu" class="btn btn-primary">Vezi portofoliul</a>
+          <a href="#chatbot" class="btn btn-secondary">Testează demo-ul AI</a>
+          <a href="https://wa.me/40755984849" target="_blank" class="btn btn-secondary">Scrie-mi pe WhatsApp</a>
         </div>
 
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85" alt="Proiect Cabana Bombonel" style="width:100%; border-radius:10px; margin-bottom:15px;">
-          <h3>Cabana Bombonel</h3>
-          <p>Website de prezentare pentru o cabană, cu un design elegant și o structură orientată spre rezervări și încredere.</p>
-          <a class="portfolio-link" href="https://petracheradu-prog.github.io/cabana-bombonel/" target="_blank">Vezi site →</a>
+        <div class="hero-meta">
+          <div class="meta-pill">Design premium & cinematic</div>
+          <div class="meta-pill">Optimizat pentru mobil</div>
+          <div class="meta-pill">Website + automatizare</div>
         </div>
       </div>
-    </section>
 
-    <section id="chatbot-demo">
-      <div class="demo-box">
-        <h2>Demo chatbot AI</h2>
-        <p>Am creat și un exemplu de asistent virtual care poate răspunde automat întrebărilor clienților, poate oferi informații despre servicii și poate ghida conversația către o programare. Este un demo simplu care arată cum poate funcționa o astfel de soluție pentru un business local.</p>
-        <div class="hero-buttons">
-          <a href="https://www.chatbase.co/ukZAWdm_DR2zLLl0cAxx_/help" target="_blank" class="btn">Testează chatbotul</a>
+      <div class="hero-visual">
+        <div class="floating-accent accent-1"></div>
+        <div class="floating-accent accent-2"></div>
+
+        <div class="portrait-frame">
+          <img src="eu.jpeg" alt="Armand Petrache">
+          <div class="portrait-badge">
+            <strong>Armand Petrache</strong>
+            <span>Website-uri premium pentru afaceri locale</span>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section>
-      <h2>Cu ce te pot ajuta</h2>
-      <div class="grid">
-        <div class="card feature-card">Website de prezentare modern și profesional</div>
-        <div class="card feature-card">Design optimizat pentru telefon și tabletă</div>
-        <div class="card feature-card">Structură clară, ușor de înțeles pentru client</div>
-        <div class="card feature-card">Optimizare pentru Google și prezență online mai bună</div>
-        <div class="card feature-card">Integrare Google Maps și date de contact vizibile</div>
-        <div class="card feature-card">Automatizare simplă pentru întrebări și cereri frecvente</div>
-      </div>
-    </section>
+  <section class="section" id="despre">
+    <div class="container">
+      <span class="section-kicker">Despre mine</span>
+      <h2 class="section-title">Imagine puternică. Execuție curată. Prezență memorabilă.</h2>
+      <p class="section-text">
+        Nu mă interesează să fac doar „un site care arată bine”. Vreau ca business-ul tău să aibă
+        o prezență online care transmite valoare, seriozitate și rafinament. Un site bun trebuie să
+        atragă, să convingă și să lase impresia că în spatele lui există un business solid.
+      </p>
+      <div class="divider"></div>
 
-    <section>
-      <h2>De ce să lucrezi cu mine</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Imagine profesională</h3>
-          <p>Un website bine făcut îți poate schimba modul în care este perceput business-ul tău încă din primele secunde.</p>
+      <div class="about-grid" style="margin-top: 38px;">
+        <div class="panel">
+          <p>
+            Salut, sunt <strong>Armand</strong> și construiesc website-uri moderne, elegante și bine structurate
+            pentru afaceri locale care vor să iasă din zona banalului.
+          </p>
+          <p>
+            Pun accent pe detalii vizuale, structură clară, experiență impecabilă pe mobil și o
+            estetică premium care ridică percepția brandului tău.
+          </p>
+          <p>
+            Pe lângă design, mă interesează și partea practică: integrare contact rapid, logică bună
+            de conversie, demo chatbot AI și automatizări simple care pot economisi timp și pot
+            transforma mai ușor vizitatorii în clienți.
+          </p>
         </div>
 
-        <div class="card">
-          <h3>Experiență bună pe mobil</h3>
-          <p>Majoritatea clienților intră de pe telefon, iar paginile trebuie să arate impecabil și să se miște rapid.</p>
-        </div>
-
-        <div class="card">
-          <h3>Claritate și încredere</h3>
-          <p>Un site bun nu înseamnă doar design frumos, ci și informație clară, structură logică și o prezentare care convinge.</p>
-        </div>
-
-        <div class="card">
-          <h3>Soluții utile</h3>
-          <p>Pe lângă partea vizuală, urmăresc să ofer soluții digitale care pot economisi timp și pot îmbunătăți experiența clienților.</p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="cta-box">
-        <h2>Vrei să discutăm despre afacerea ta?</h2>
-        <p>Dacă ai nevoie de un website modern sau vrei să vezi cum ai putea folosi soluții digitale simple pentru a răspunde mai bine clienților, scrie-mi și discutăm. Îți pot spune ce s-ar potrivi cel mai bine pentru tipul tău de business.</p>
-        <div class="hero-buttons">
-          <a href="https://wa.me/40755984849" target="_blank" class="btn">Contact pe WhatsApp</a>
-          <a href="mailto:petrachearmandraducu@gmail.com" class="btn btn-secondary">Trimite email</a>
+        <div class="panel quote-card">
+          <blockquote>
+            „Un business bun merită o prezență online care să pară la același nivel.”
+          </blockquote>
+          <div class="signature">Armand Petrache</div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section>
-      <h2>Contact</h2>
-      <div class="card contact-list">
-        <p><strong>WhatsApp:</strong> <a href="https://wa.me/40755984849" target="_blank">0755984849</a></p>
-        <p><strong>Email:</strong> <a href="mailto:petrachearmandraducu@gmail.com">petrachearmandraducu@gmail.com</a></p>
-        <p><strong>Instagram:</strong> <a href="https://www.instagram.com/armand__radu/" target="_blank">@armand__radu</a></p>
-        <p><strong>TikTok:</strong> <a href="https://www.tiktok.com/@armandwebsites" target="_blank">@armandwebsites</a></p>
-        <br>
-        <p>Dacă vrei o colaborare, o pagină de prezentare sau o soluție digitală simplă pentru business-ul tău, mă poți contacta direct pe WhatsApp sau email.</p>
+  <section class="section" id="portofoliu">
+    <div class="container">
+      <span class="section-kicker">Portofoliu</span>
+      <h2 class="section-title">Proiecte construite să inspire încredere</h2>
+      <p class="section-text">
+        Exemple de website-uri realizate pentru afaceri locale, fiecare cu accent pe estetică, claritate și
+        impact vizual. Ideea nu este doar să arate bine, ci să creeze impresia unui business premium.
+      </p>
+
+      <div class="portfolio-grid">
+        <article class="project-card">
+          <div class="project-image">
+            <img
+              src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&fit=crop&w=1400&q=80"
+              alt="Barber Evolution"
+            >
+          </div>
+          <div class="project-content">
+            <h3>Barber Evolution</h3>
+            <p>
+              Website pentru o frizerie premium, gândit să transmită stil, masculinitate și o atmosferă exclusivistă.
+              Design-ul pune accent pe imagine, servicii și senzația de brand bine poziționat.
+            </p>
+            <a class="project-link" href="https://petracheradu-prog.github.io/barber-evolution/" target="_blank">
+              Vezi proiectul →
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image">
+            <img
+              src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80"
+              alt="Cabana Bombonel"
+            >
+          </div>
+          <div class="project-content">
+            <h3>Cabana Bombonel</h3>
+            <p>
+              Website de prezentare pentru o cabană, cu un stil elegant și cald, orientat spre imagine, atmosferă
+              și o experiență vizuală care invită la rezervare.
+            </p>
+            <a class="project-link" href="https://petracheradu-prog.github.io/cabana-bombonel/" target="_blank">
+              Vezi proiectul →
+            </a>
+          </div>
+        </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-  </div>
+  <section class="section" id="servicii">
+    <div class="container">
+      <span class="section-kicker">Ce ofer</span>
+      <h2 class="section-title">Servicii gândite pentru business-uri care vor mai mult</h2>
+      <p class="section-text">
+        Fie că ai nevoie de un site de prezentare premium sau de o soluție simplă care să îți ajute
+        echipa să răspundă mai rapid clienților, construiesc totul într-un mod clar, elegant și util.
+      </p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="number">01</div>
+          <h3>Website de prezentare premium</h3>
+          <p>
+            Pagini elegante, bine structurate și create pentru a transmite profesionalism, valoare și încredere.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="number">02</div>
+          <h3>Design optimizat pentru mobil</h3>
+          <p>
+            Experiență impecabilă pe telefon, tabletă și desktop, pentru ca brandul tău să arate bine oriunde.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="number">03</div>
+          <h3>Automatizări simple și utile</h3>
+          <p>
+            Soluții digitale care pot prelua cereri, organiza lead-uri și îmbunătăți modul în care comunici cu clienții.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <span class="section-kicker">Avantaje</span>
+      <h2 class="section-title">De ce să lucrezi cu mine</h2>
+      <p class="section-text">
+        Diferența reală nu stă doar în design, ci în felul în care fiecare element contribuie la percepția
+        brandului tău și la decizia clientului de a te contacta.
+      </p>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <h3>Imagine premium</h3>
+          <p>
+            Un site bine executat schimbă modul în care este perceput business-ul tău și îl poziționează mai sus în mintea clientului.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <h3>Claritate și structură</h3>
+          <p>
+            Informația este așezată logic, simplu și elegant, astfel încât vizitatorul să înțeleagă imediat ce oferi și de ce merită să te aleagă.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <h3>Experiență care inspiră încredere</h3>
+          <p>
+            Detaliile vizuale, tipografia, culorile și modul în care curge pagina lucrează împreună pentru a da senzația de brand serios.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <h3>Utilitate, nu doar estetică</h3>
+          <p>
+            Website-ul nu trebuie să fie doar frumos, ci și funcțional: contact clar, CTA-uri bune, posibilitate de automatizare și experiență fluidă.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="chatbot">
+    <div class="container">
+      <div class="showcase">
+        <span class="section-kicker">Demo AI</span>
+        <h3>Asistent virtual care răspunde elegant și eficient</h3>
+        <p>
+          Am creat și un demo de chatbot AI care poate răspunde întrebărilor clienților, poate oferi informații
+          despre servicii și poate ghida conversația către o programare sau o cerere de contact. Este un exemplu
+          simplu, dar foarte bun pentru a vedea ce se poate implementa într-un business local.
+        </p>
+        <div class="hero-actions" style="justify-content:center;">
+          <a href="https://www.chatbase.co/ukZAWdm_DR2zLLl0cAxx_/help" target="_blank" class="btn btn-primary">Testează chatbotul</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container">
+      <span class="section-kicker">Contact</span>
+      <h2 class="section-title">Hai să construim ceva care chiar întoarce priviri</h2>
+      <p class="section-text">
+        Dacă vrei un website care să arate premium, să inspire încredere și să ofere business-ului tău o imagine
+        mai puternică, scrie-mi. Discutăm direct și vedem ce variantă ți se potrivește.
+      </p>
+
+      <div class="contact-grid" style="margin-top: 38px;">
+        <div class="panel contact-card">
+          <div class="contact-list">
+            <div class="contact-item">
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/40755984849" target="_blank">0755 984 849</a>
+            </div>
+
+            <div class="contact-item">
+              <strong>Email</strong>
+              <a href="mailto:petrachearmandraducu@gmail.com">petrachearmandraducu@gmail.com</a>
+            </div>
+
+            <div class="contact-item">
+              <strong>Instagram</strong>
+              <a href="https://www.instagram.com/armand__radu/" target="_blank">@armand__radu</a>
+            </div>
+
+            <div class="contact-item">
+              <strong>TikTok</strong>
+              <a href="https://www.tiktok.com/@armandwebsites" target="_blank">@armandwebsites</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel cta-panel">
+          <h3>Prezență online cu greutate.</h3>
+          <p>
+            Website-uri premium, identitate vizuală elegantă și soluții digitale construite pentru afaceri
+            care vor să pară la un alt nivel.
+          </p>
+          <div class="hero-actions">
+            <a href="https://wa.me/40755984849" target="_blank" class="btn btn-primary">Scrie-mi acum</a>
+            <a href="mailto:petrachearmandraducu@gmail.com" class="btn btn-secondary">Trimite email</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <footer>
-    © 2026 Armand | Website-uri și soluții digitale pentru afaceri locale
+    © 2026 Armand Petrache • Website-uri premium și automatizări pentru afaceri locale
   </footer>
 
-  <a href="https://wa.me/40755984849" target="_blank" class="whatsapp-btn" aria-label="Contact WhatsApp">💬</a>
+  <a href="https://wa.me/40755984849" target="_blank" class="whatsapp-float" aria-label="Contact WhatsApp">
+    ✦
+  </a>
 
 </body>
 </html>
